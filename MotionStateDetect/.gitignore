@@ -1,0 +1,66 @@
+# Local tool/cache files
+mx.scratch
+*.bkp
+*~
+.$*
+
+# Keil/MDK build outputs
+MDK-ARM/**/*.uvguix.*
+MDK-ARM/**/Objects/
+MDK-ARM/**/Listings/
+MDK-ARM/**/*.o
+MDK-ARM/**/*.d
+MDK-ARM/**/*.crf
+MDK-ARM/**/*.axf
+MDK-ARM/**/*.hex
+MDK-ARM/**/*.bin
+MDK-ARM/**/*.map
+MDK-ARM/**/*.lst
+MDK-ARM/**/*.htm
+MDK-ARM/**/*.lnp
+MDK-ARM/**/*.dep
+MDK-ARM/**/*.bak
+MDK-ARM/**/*.__i
+MDK-ARM/**/*._ac
+MDK-ARM/**/*.o.tmp
+MDK-ARM/**/JLinkLog.txt
+
+# Common generated files
+*.pyc
+__pycache__/
+*.log
+
+# 本地改动日志，按AGENTS要求不入git
+/Record.md
+
+# Keil自动生成的本机构建脚本，不属于可移植构建输入
+/MDK-ARM/CORE.BAT
+
+# 必须跟踪的Keil工程与构建输入（保留规则放在末尾）
+# uvprojx保存源文件/库文件列表、IncludePath和编译链接选项；不可当缓存忽略。
+# uvoptx保存工程选项；uvmpw保存多工程工作区。
+!*.uvproj
+!*.uvprojx
+!*.uvopt
+!*.uvoptx
+!*.uvmpw
+# 链接脚本与项目自带的预编译库属于构建输入，不是临时产物。
+# 必需库放在受版本管理的目录（例如User_Data/Lib），不要放入Objects/Listings。
+!*.sct
+!*.lib
+!*.a
+# 不要整体忽略MDK-ARM/CORE：当前CORE.sct在此目录。
+!MDK-ARM/
+!MDK-ARM/*.uvproj
+!MDK-ARM/*.uvprojx
+!MDK-ARM/*.uvopt
+!MDK-ARM/*.uvoptx
+!MDK-ARM/*.uvmpw
+!MDK-ARM/CORE/
+!MDK-ARM/CORE/*.sct
+# RTE组件与调试配置应随分支同步；仅uvguix个人布局继续忽略。
+!MDK-ARM/RTE/
+!MDK-ARM/RTE/**
+!MDK-ARM/DebugConfig/
+!MDK-ARM/DebugConfig/*.dbgconf
+!MDK-ARM/*.scvd
